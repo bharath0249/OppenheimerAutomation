@@ -1,10 +1,13 @@
 *** Settings ***
 Resource    ../resources/common.robot
+Resource    ../resources/singleRecordInsertion.robot
 
-Test Setup    Launch Oppenheimer Project Home Screen
-Test Teardown    Close browser
+Test Setup     Run Keywords  Launch Oppenheimer Project Home Screen
+...            AND           Instantiate session
+Test Teardown  Run Keywords  Close browser
+...            AND           Clear Data Base
 
 *** Test Cases ***
 Validate if Clerk is able to insert single record with all valid details
-     wait until element is visible     ${visit_swagger_xpath}
-     click element    ${visit_swagger_xpath}
+     Insert single record with all valid fields usng API
+     Validate record is inserted successfully in UI
