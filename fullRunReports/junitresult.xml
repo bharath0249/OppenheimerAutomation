@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion" tests="20" errors="0" failures="4" skipped="0" time="998.541" timestamp="2022-09-28T19:42:41.415000">
+<testsuite name="dispenseTaxRelief" tests="3" errors="0" failures="0" skipped="0" time="23.856" timestamp="2022-09-28T19:42:41.438000">
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.dispenseTaxRelief" name="Validate governer should be able to see dipense now button in red colour" time="6.413">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.dispenseTaxRelief" name="Validate governer should be able to see dipense now text" time="5.439">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.dispenseTaxRelief" name="Validate clicking on dispense now button navigates to cash dispensed page" time="11.592">
+</testcase>
+</testsuite>
+<testsuite name="multiRecordInsertion" tests="5" errors="0" failures="1" skipped="0" time="389.243" timestamp="2022-09-28T19:43:05.296000">
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.multiRecordInsertion" name="Validate if Clerk is able to insert multiple records with all valid details" time="6.227">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.multiRecordInsertion" name="Validate Clerk is not able to insert multiple records when required fields are missing" time="125.898">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.multiRecordInsertion" name="Validate Clerk is not able to insert multiple records when DOB is greater than current date" time="125.856">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.multiRecordInsertion" name="Validate Clerk is not able to insert multiple records when nat id is invalid" time="5.645">
+<failure message="Url: http://localhost:8080/calculator/insertMultiple Expected status: 202 != 500" type="AssertionError"/>
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.multiRecordInsertion" name="Validate Clerk is not able to insert multiple records when gender identifier is invalid" time="125.588">
+</testcase>
+</testsuite>
+<testsuite name="queryTaxRelief" tests="3" errors="0" failures="1" skipped="0" time="31.430" timestamp="2022-09-28T19:49:34.541000">
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.queryTaxRelief" name="Validate if Book Keeper is able to fetch the list of tax relief details" time="10.873">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.queryTaxRelief" name="Validate if Book Keeper is able to see each person gets minimum value of relief" time="10.300">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.queryTaxRelief" name="Validate if Book Keeper is getting prper rounded tax relief amounts" time="10.238">
+<failure message="Lists are different:&#10;Index 0: 121.61 != 121.60" type="AssertionError"/>
+</testcase>
+</testsuite>
+<testsuite name="recordInsertionFromCSV" tests="4" errors="0" failures="0" skipped="0" time="282.510" timestamp="2022-09-28T19:50:05.973000">
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.recordInsertionFromCSV" name="Validate if Clerk is able to upload csv with single record and see the output" time="10.238">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.recordInsertionFromCSV" name="Validate if Clerk is able to upload csv with multiple records and see the output" time="10.336">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.recordInsertionFromCSV" name="Validate Clerk is not able to upload csv with missing headers" time="130.858">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.recordInsertionFromCSV" name="Validate Clerk is not able to upload csv with wrong header name" time="131.065">
+</testcase>
+</testsuite>
+<testsuite name="singleRecordInsertion" tests="5" errors="0" failures="2" skipped="0" time="271.468" timestamp="2022-09-28T19:54:48.486000">
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.singleRecordInsertion" name="Validate if Clerk is able to insert single record with all valid details" time="5.698">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.singleRecordInsertion" name="Validate Clerk is not able to insert single record when required fields are missing" time="127.145">
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.singleRecordInsertion" name="Validate Clerk is not able to insert single record when DOB is greater than current date" time="6.237">
+<failure message="Url: http://localhost:8080/calculator/insert Expected status: 202 != 500" type="AssertionError"/>
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.singleRecordInsertion" name="Validate Clerk is not able to insert single record when nat id is invalid" time="6.730">
+<failure message="Url: http://localhost:8080/calculator/insert Expected status: 202 != 500" type="AssertionError"/>
+</testcase>
+<testcase classname="dispenseTaxRelief &amp; multiRecordInsertion &amp; queryTaxRelief &amp; recordInsertionFromCSV &amp; singleRecordInsertion.singleRecordInsertion" name="Validate Clerk is not able to insert single record when gender identifier is invalid" time="125.637">
+</testcase>
+</testsuite>
+</testsuite>

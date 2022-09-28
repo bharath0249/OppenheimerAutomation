@@ -1,5 +1,7 @@
 *** Variables ***
+# Accepted values Chrome, Firefox
 ${BROWSER}   Chrome
+# Accepted Values http, https
 ${PROTOCOL}  http
 ${SERVER}  localhost
 ${PORT}      8080

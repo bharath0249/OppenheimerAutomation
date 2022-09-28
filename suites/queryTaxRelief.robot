@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../resources/common.robot
-Resource    ../resources/singleRecordInsertion.robot
+Resource    ../resources/queryTaxRelief.robot
 
 Test Setup     Run Keywords  Launch Oppenheimer Project Home Screen
 ...            AND           Instantiate session
@@ -8,29 +8,18 @@ Test Teardown  Run Keywords  Close browser
 ...            AND           Clear Data Base
 
 *** Test Cases ***
-Validate if Clerk is able to insert single record with all valid details
-     [Tags]  SMOKE  AC1
-     Insert single record with all valid fields usng API
-     Validate record is inserted successfully in UI
+Validate if Book Keeper is able to fetch the list of tax relief details
+     [Tags]  US4  SMOKE  AC1
+     Upload Tax details CSV File   ${tax_details_csv_path}
+     Validate tax relief details for each person in data base
 
-Validate Clerk is not able to insert single record when required fields are missing
-     [Tags]  AC2
-     Insert single record with invalid data and validate response code  ${missing_required_fields_file}   ${internal_server_error}
-     Validate record is not inserted in UI
+Validate if Book Keeper is able to see each person gets minimum value of relief
+     [Tags]  US4  SMOKE  AC2
+     Upload Tax details CSV File   ${tax_relief_less_than_50_csv}
+     Validate tax relief has minimum value of 50
 
-Validate Clerk is not able to insert single record when DOB is greater than current date
-     [Tags]  AC3
-     Insert single record with invalid data and validate response code  ${dob_greater_than_current}   ${internal_server_error}
-     Validate record is not inserted in UI
-
-Validate Clerk is not able to insert single record when nat id is invalid
-     [Tags]  AC4
-     Insert single record with invalid data and validate response code  ${invalid_natid}   ${internal_server_error}
-     Validate record is not inserted in UI
-
-Validate Clerk is not able to insert single record when gender identifier is invalid
-     [Tags]  AC5
-     Insert single record with invalid data and validate response code   ${invalid_gender_identifier}   ${internal_server_error}
-     Validate record is not inserted in UI
-
+Validate if Book Keeper is getting proper rounded tax relief amounts
+     [Tags]  US4  AC3
+     Upload Tax details CSV File   ${tax_relief_rounded_off_values}
+     Validate tax relief details are properly rounded off
 

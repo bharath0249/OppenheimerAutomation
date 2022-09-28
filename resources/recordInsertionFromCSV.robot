@@ -26,10 +26,12 @@ Set Test Data
    ${length}=  Get length  ${csv_associative}
    @{masked_natid_list}=  Create list
    @{bonus_list}=  Create list
+   @{names_list}=  Create list
    FOR  ${i}  IN RANGE  0  ${length}
     ${DOB}=  set variable  ${csv_associative[${i}]}[birthday]
     ${gender}=  set variable   ${csv_associative[${i}]}[gender]
     ${natid}=  set variable   ${csv_associative[${i}]}[natid]
+    ${name}=  set variable  ${csv_associative[${i}]}[name]
     ${salary}=  set variable    ${csv_associative[${i}]}[salary]
     ${tax}=  set variable  ${csv_associative[${i}]}[tax]
     ${converted_dob}=  convert date   ${DOB}  date_format=%d%m%Y
@@ -39,9 +41,11 @@ Set Test Data
     ${masked_natid}=  Get masked natural id  ${natid}
     Append to list  ${masked_natid_list}   ${masked_natid}
     Append to list  ${bonus_list}  ${bonus}
+    Append to list  ${names_list}  ${name}
    END
    Set test variable  ${masked_natid_list}
    Set test variable  ${bonus_list}
+   Set test variable  ${names_list}
 
 Validate multiple records are inserted successfully in UI
    ${length}=  Get length  ${bonus_list}
