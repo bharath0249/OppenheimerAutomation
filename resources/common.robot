@@ -53,6 +53,7 @@ Calculate tax amount
     ${gender_bonus} =	Set Variable If	 "${gender}" == "M"	 0
     ...	        "${gender}" == "F"	 500
     ${bonus}=  Evaluate  ((${salary}-${tax})*${variable})+${gender_bonus}
+    ${bonus}=  Evaluate  "%.2f" % ${bonus}
     IF  ${bonus}<50
      ${bonus}=  Set Variable  50.00
     END

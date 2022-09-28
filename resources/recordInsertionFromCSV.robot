@@ -3,6 +3,9 @@ Resource  common.robot
 
 *** Variables ***
 ${valid_csv_path}   ${EXECDIR}/inputData/recordInsertionFromCSV/validCSV.csv
+${valid_csv_multi_row_path}    ${EXECDIR}/inputData/recordInsertionFromCSV/validCSVMultiRow.csv
+${csv_with_missing_headers}    ${EXECDIR}/inputData/recordInsertionFromCSV/CSVWithMissingHeaders.csv
+${csv_with_wrong_header}       ${EXECDIR}/inputData/recordInsertionFromCSV/CSVWithInvalidHeaderName.csv
 
 *** Keywords ***
 Upload Tax details CSV File
@@ -40,10 +43,21 @@ Set Test Data
    Set test variable  ${masked_natid_list}
    Set test variable  ${bonus_list}
 
-Validate multiple records is inserted successfully in UI
+Validate multiple records are inserted successfully in UI
    ${length}=  Get length  ${bonus_list}
    perform click on button  ${refresh_table_button}
    FOR  ${i}  IN RANGE  0  ${length}
     page should contain  ${masked_natid_list[${i}]}
     page should contain  ${bonus_list[${i}]}
    END
+
+Validate record is not inserted in UI
+   perform click on button  ${refresh_table_button}
+   page should not contain  ${tax_relief_table}
+   page should contain   No records at the moment
+
+Upload invalid Tax details CSV File
+    [Arguments]  ${csv_path}
+    sleep  5s
+    wait until element is enabled  ${upload_csv_input}
+    choose file  ${upload_csv_input}  ${csv_path}
