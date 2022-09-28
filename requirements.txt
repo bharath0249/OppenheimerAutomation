@@ -4,3 +4,4 @@ robotframework-pabot==2.7.0
 webdriver-manager==3.8.3
 robotframework-seleniumlibrary==6.0.0
 robotframework-jsonlibrary==0.5
+robotframework-CSVLibrary==0.0.5
