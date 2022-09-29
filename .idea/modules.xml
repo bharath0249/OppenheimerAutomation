@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/robotFrameworkUIAPIAutomationSample.iml" filepath="$PROJECT_DIR$/.idea/robotFrameworkUIAPIAutomationSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/OppenheimerAutomation.iml" filepath="$PROJECT_DIR$/.idea/OppenheimerAutomation.iml" />
     </modules>
   </component>
 </project>
