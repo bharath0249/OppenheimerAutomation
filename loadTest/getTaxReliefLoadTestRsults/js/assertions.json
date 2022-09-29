@@ -1,0 +1,10 @@
+{
+  "simulation": "biz.oppenheimer.OppenheimerLoadTest",
+  "simulationId": "oppenheimerloadtest-20220929114746323",
+  "start": 1664452067853,
+  "description": "",
+  "scenarios": ["fabrick simulation"],
+  "assertions": [
+
+  ]
+}
