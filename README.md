@@ -7,7 +7,7 @@ _Install pip3_
 
 _Install PyCharm Community edition IDE(https://www.jetbrains.com/pycharm/download/#section=mac)_
 
-#Framework Setup
+# Framework Setup
 
 _Clone framework from git hub (https://github.com/bharath0249/OppenheimerAutomation.git)_
 
@@ -21,7 +21,7 @@ _Validate installation by running below command_
 
 `robot --version`
 
-#Test Execution
+# Test Execution
 
 _You can use below command to execute test cases_
 
@@ -39,6 +39,6 @@ Command to change browser (Chrome and firefox are supported currently):
 Command to run Smoke Tests only:
 `robot -i SMOKE suites/*`
 
-#Note: 
+# Note: 
 No need of installing any browser drivers like chrome driver or gecko drivers as it is handled by WebDrivermanager Class
 
