@@ -9,11 +9,11 @@ Test Teardown  Run Keywords  Close browser
 ...            AND           Clear Data Base
 
 *** Test Cases ***
-Validate governer should be able to see dipense now button in red colour
+Validate governor should be able to see dispense now button in red colour
      [Tags]   US5  AC1
      validate colour of dispense now button and text from CSS
 
-Validate governer should be able to see dipense now text
+Validate governor should be able to see dispense now text
      [Tags]   US5  AC2
      validate text of dispense now button
 
